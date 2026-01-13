@@ -1,40 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+Forex Conversion Frontend
+Overview
 
-## Getting Started
+This is a simple Next.js frontend that allows users to convert currencies and view a history of past conversions. It integrates directly with the Forex Conversion Backend API.
 
-First, run the development server:
+The focus is on correctness, clarity, and responsiveness rather than UI polish.
 
-```bash
+Tech Stack
+
+Next.js (Pages Router)
+
+TypeScript
+
+Tailwind CSS
+
+Features
+
+Currency conversion form
+
+Client-side input validation
+
+Display of converted result
+
+Conversion history list
+
+Responsive layout
+
+Setup Instructions
+1. Install Dependencies
+npm install
+
+2. Environment Variables
+
+Create a .env.local file:
+
+NEXT_PUBLIC_API_BASE_URL=http://localhost:3000
+
+
+An .env.example file is included for reference.
+
+3. Run the App
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+The frontend will be available at http://localhost:3001.
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Approach
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+The main page composes a conversion form and a conversion history list.
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+API calls are abstracted into a small client layer.
 
-## Learn More
+React state is used directly; no external state management libraries.
 
-To learn more about Next.js, take a look at the following resources:
+Tailwind CSS is used for layout and responsiveness.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+The UI remains minimal to keep focus on functionality.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Assumptions
 
-## Deploy on Vercel
+The backend API is available and running.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+No user authentication or session handling is required.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+Conversion history is global rather than user-specific.
+
+The list of currencies is derived from backend data.
+
+Additional Notes
+
+Client-side validation prevents obvious invalid submissions.
+
+Backend validation is treated as the source of truth.
+
+The frontend is intentionally simple to allow easy live modification during review.
