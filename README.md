@@ -71,5 +71,3 @@ Additional Notes
 Client-side validation prevents obvious invalid submissions.
 
 Backend validation is treated as the source of truth.
-
-The frontend is intentionally simple to allow easy live modification during review.
