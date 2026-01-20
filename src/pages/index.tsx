@@ -26,7 +26,8 @@ export default function Home() {
   }, []);
 
   const handleConvert = (result: ConvertResponse) => {
-    loadConversions();
+    // loadConversions();
+    setConversions([{ createdAt: new Date(), ...result }, ...conversions]);
   };
 
   return (

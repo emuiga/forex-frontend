@@ -90,7 +90,8 @@ export default function ConversionForm({ onConvert }: ConversionFormProps) {
           />
         </div>
 
-        <div>
+<div className="flex space-x-4" style={{ width: "100%" }}>
+        <div className="flex-grow">
           <label htmlFor="baseCurrency" className="block text-sm font-medium text-gray-700 mb-1">
             From
           </label>
@@ -109,7 +110,7 @@ export default function ConversionForm({ onConvert }: ConversionFormProps) {
           </select>
         </div>
 
-        <div>
+        <div className="flex-grow">
           <label htmlFor="targetCurrency" className="block text-sm font-medium text-gray-700 mb-1">
             To
           </label>
@@ -128,7 +129,7 @@ export default function ConversionForm({ onConvert }: ConversionFormProps) {
           </select>
         </div>
       </div>
-
+</div>
       {error && (
         <div className="text-sm text-red-600 bg-red-50 border border-red-200 rounded-md px-3 py-2">
           {error}

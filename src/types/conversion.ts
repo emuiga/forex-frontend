@@ -13,13 +13,12 @@ export interface ConvertResponse {
 }
 
 export interface Conversion {
-  id: string;
   amount: number;
   baseCurrency: string;
   targetCurrency: string;
   conversionRate: number;
   convertedAmount: number;
-  createdAt: string;
+  createdAt: Date;
 }
 
 export interface RatesResponse {
